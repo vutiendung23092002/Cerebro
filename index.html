@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en" class="vk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/images/favicons/apple-touch-icon.png">
+    <link rel="icon" href="./src/images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./src/images/favicons/site.webmanifest">
+    <title>Cerebro Bot </title>
+    <link rel="icon" href="favicon.ico">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body x-data="
+      {
+        scrolledFromTop: false
+      }
+    " x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" class="kf fl">
+    <!-- ===== Header start ===== -->
+    <header x-data="
+        {
+          navbarOpen: false,
+          dropdownOpen: false
+        }
+      " :class="scrolledFromTop ? 'kf gl zf rl ij oj ' : ' lf hl' " class="f ba qb jc be c"
+        style="padding-top: 20px; background-color: #0c091f;">
+        <div class="a">
+            <div class="e ha qb be ee">
+                <div class="kc zc ng">
+                    <a href="/" :class="scrolledFromTop && 'og gp' " class="ob jc ah ip">
+                        <img src="src/images/logo-1.png" alt="logo" class="jc xk pd" />
+                        <img src="src/images/logo-1.png" alt="logo" class="sb jc wk pd" />
+                    </a>
+                </div>
+                <div class="qb jc be ce ng">
+                    <nav :class="!navbarOpen && 'sb' " id="navbarCollapse"
+                        class="d g2 k jc kf rg jj ml fo qo uo cp cba dp hp xp bq">
+                        <ul class="vq ro menu">
+                            <li class="xi ul">
+                                <a href="/" class=" qb qbb tg hi oi bj kk vl em so ip cp-gothic">
+                                    HOME
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"
+                                    class=" qb qbb tg hi oi xi kk vl em ko so ip 2xl:ud-ml-12 cp-gothic">
+                                    DOCS
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://t.me/cerebroswap" target="_blank"
+                                    class=" qb qbb tg hi oi xi kk vl em ko so ip 2xl:ud-ml-12 cp-gothic">
+                                    COMMUNITY
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' "
+                            id="navbarToggler" class="d g h/2 ob qd/2 me pg qg mj qk to">
+                            <span :class="navbarOpen && 'sd i' " class="e ia ob tb lc mf il"></span>
+                            <span :class="navbarOpen && 'fj' " class="e ia ob tb lc mf il"></span>
+                            <span :class="navbarOpen && 'j td' " class="e ia ob tb lc mf il"></span>
+                        </button>
+
+                    </div>
+                    <div class="qb ce lh pp oq 2xl:ud-pl-20">
+
+                        <div class=" pm">
+                            <a href="#"
+                                class="oe of zg wg ii ii3 oi zi hk dark:hover:bg-opacity-90">
+                                Terminal
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ===== Header end ===== -->
+
+    <!-- ===== Hero Section start ===== -->
+    <section id="home" class="e ca wh qh">
+        <div class="a">
+            <div class="ha qb _d">
+                <div class="jc ng">
+                    <div class="la fd fi">
+                        <span class="va gi pi bj fn cp-gothic">
+                            <img src="src/images/icons/Layer6.png" class="dc">
+                            Private, Simple, Accessible
+                        </span>
+                        <h1 class="pa li pi ui yi vl boa ri">
+                            Trade any token
+                        </h1>
+                        <h3 class="pa li pi ui yi vl dn bob ri">
+                            with any currency
+                        </h3>
+                        <p class="la xa gd gi qi xi vl cp-gothic">
+                            "Your Multi-Chain Access to the Decentralized Markets
+                            Go Swap"
+                        </p>
+
+                        <a href="https://app.uniswap.org/" target="_blank"
+                            class="oe of zg ng ii oi zi hk dark:hover:bg-opacity-90">
+                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="dc ka"
+                                viewBox="0 0 68.000000 67.000000" preserveAspectRatio="xMidYMid meet">
+
+                                <g transform="translate(0.000000,67.000000) scale(0.100000,-0.100000)" fill="#fff"
+                                    stroke="none">
+                                    <path d="M255 661 c-6 -5 -27 -14 -47 -21 -47 -14 -61 -32 -16 -19 114 32 250
+                                    -18 319 -117 93 -135 59 -302 -73 -368 -86 -43 -174 -32 -248 31 -106 91 -106
+                                    242 0 302 102 57 230 -12 230 -126 0 -54 -33 -93 -79 -93 -38 0 -91 44 -91 76
+                                    0 34 26 30 38 -5 12 -34 42 -47 72 -31 52 28 27 120 -43 154 -50 24 -101 15
+                                    -139 -26 -24 -25 -28 -39 -28 -85 0 -64 16 -99 64 -141 95 -83 240 -53 295 61
+                                    52 108 -1 246 -120 312 -46 26 -64 30 -124 29 -82 0 -130 -21 -186 -81 -79
+                                    -82 -98 -175 -58 -285 36 -98 110 -168 222 -209 66 -24 119 -24 191 1 149 51
+                                    229 161 230 315 0 66 -4 90 -26 136 -55 120 -177 199 -306 199 -37 0 -72 -4
+                                    -77 -9z" />
+                                </g>
+                            </svg>swap
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a" style="display: flex;justify-content: center;margin-top: 50px;">
+            <video src="https://cerebro.bot/src/videos/cerebro.webm" autoplay muted loop class="ucb"></video>
+        </div>
+        <div class="d f l ea yba jc hj" style="
+          background-image: linear-gradient(
+            180deg,
+            #0c091f 0%,
+            #0c091f 85%,
+            #440263 95%,
+            #7b05b3 100%
+          );
+        ">
+            <img src="src/images/OIP21.png" alt="" class="hive2" />
+            <img src="src/images/Layer9.png" alt="" class="hive1" />
+            <img src="src/images/Layer101.png" alt="" class="glare2" />
+            <img src="src/images/Layer102.png" alt="" class="glare1" />
+        </div>
+
+
+    </section>
+    <!-- ===== Hero Section end ===== -->
+
+    <!-- ===== Features Section start ===== -->
+    <section class="zh raa">
+
+        <div class="a">
+            <div class="wow fadeInUp la fb fi qn" data-wow-delay="0s">
+                <span class="va gi pi bj fn cp-gothic">
+                    <img src="src/images/icons/unnamed.png" class="dc">
+                    Fast, Secure, Connectionless
+                </span>
+                <h2 class="va li pi ui yi vl boa ri">
+                    one bot
+                </h2>
+                <h2 class="va li pi ui yi vl bob ri">
+                    all chains
+                </h2>
+                <h2 class="va li pi ui yi vl boc ri">
+                    any dex
+                </h2>
+                <div class="main">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    <p>Cerebro Bot is a next-gen trading tool that unifies and simplifies cross-chain trading across
+                        over a dozen
+                        networks. Through a unified interface, users can seamlessly swap tokens without managing
+                        multiple wallets or
+                        bridges. Powered by zkSync for instant settlement and privacy, Cerebro's architecture uses CCC
+                        (Cross-Chain-Communication) layer
+                        to route trades efficiently,streamlining complex swaps and reducing costs. A must-have for any
+                        trader,
+                        Cerebro removes complexity by opening access to any DEX and chain in one place.</p>
+                    <div class="qa ra">
+                        <a href="#" target="_blank"
+                            class="oe of zg wg ii oi zi hk dark:hover:bg-opacity-90">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- ===== Features Section end ===== -->
+
+    <!-- ===== Token Section start ===== -->
+    <section class=" a2 e ca qaa">
+        <img src="src/images/Layer21.png" class="hive3">
+        <div class="a a2 e ca" style="margin-bottom: 2rem;">
+            <div class="me  wg zm lp qea vh gls-gray">
+                <div class="ha qb _d be qe">
+                    <div class="jc ng ">
+                        <div class="wow fadeInUp hb qb be de no kea vid-position2" data-wow-delay="0s"
+                            style="visibility: visible; animation-delay: 0s;">
+                            <video src="https://cerebro.bot/src/videos/out%20(3).webm" class="uca " autoplay="" muted=""
+                                loop=""></video>
+                        </div>
+                        <div class="wow fadeInUp ib" data-wow-delay="0s"
+                            style="visibility: visible; animation-delay: 0s;">
+                            <span class="va gi pi ri bj tsw">
+                                <nobr>Cross-Chain-Communication</nobr> Protocol
+                            </span>
+                            <div class="qb" style="position: relative;">
+                                <h2 class="va li pi ui yi boe bg-fill"
+                                    style="z-index:10; background-image: url('src/images/a5761e0f5384c416a92f.png');position: relative;">
+                                    <nobr>Cross-Chain-Communication</nobr> Protocol
+                                    <h2 class="va li pi ui yi boe text-overlay_1">
+                                        <nobr>Cross-Chain-Communication</nobr> Protocol
+                                    </h2>
+                                </h2>
+
+                            </div>
+                            <p class="gia qi xi ul mq fij">
+                                Using an innovative CCC protocol, Cerebro
+                                connects across chains to enable instant token
+                                swaps on multiple networks. This protocol detects the token's native
+                                chain, optimizes the route, and eliminates the need for native assets
+                                on each chain, ensuring a seamless and quick transaction for users.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="jc ng yo/2">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="haa qb _d ab">
+
+                <div class="jc ng nga vn/2">
+                    <div class="wow fadeInUp e ca ra ke qe kf sg hh um xn qea kea hcb gls-pink vha" data-wow-delay="0s"
+                        style="visibility: visible; animation-delay: 0s;">
+
+                        <div class="xa qb be">
+                            <div class="sa cc jc kd kea ne">
+                                <video src="https://cerebro.bot/src/videos/out.webm" class="hca vid-position"
+                                    autoplay="" muted="" loop="" __idm_id__="9756678"></video>
+                            </div>
+                            <div class="jc">
+                                <span class="va gi pi ri bj tsw2">
+                                    Connectionless <nobr>Wallet Routing</nobr>
+                                </span>
+                                <h3 class="jb gi gib oi aj bod bg-fill rg"
+                                    style="background-image: url('src/images/infinityloopwithholo.png');position: absolute;">
+                                    Connectionless <nobr>Wallet Routing</nobr>
+                                </h3>
+                                <h3 class="jb gi gib oi aj bod rg text-overlay_2">
+                                    Connectionless <nobr>Wallet Routing</nobr>
+                                </h3>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="ii qi ti gi xi ul fij">
+                                Cerebro's router auto-generates a temporary
+                                wallet for users, letting them send funds without
+                                connecting an external wallet. The router
+                                identifies the optimal route, ensuring efficient
+                                and secure token delivery through
+                                connectionless technology.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="jc ng nga vn/2">
+                    <div class="wow fadeInUp e ca ra ke qe kf sg hh um xn qea kea hcb gls-blue vha" data-wow-delay="0s"
+                        style="visibility: visible; animation-delay: 0s;">
+
+                        <div class="xa qb be">
+                            <div class="sa cc jc kd kea ne">
+                                <video src="https://cerebro.bot/src/videos/out%20(2).webm" class="hca vid-position"
+                                    autoplay="" muted="" loop="" __idm_id__="9756677"></video>
+                            </div>
+                            <div class="jc">
+                                <span class="va gi pi ri bj tsw2">
+                                    Automated <nobr>Token Delivery</nobr>
+                                </span>
+                                <h3 class="jb gi gib oi aj  bod bg-fill rg"
+                                    style="background-image: url('src/images/3dabstractpurplemeta.png');position: absolute;">
+                                    Automated <nobr>Token Delivery</nobr>
+                                </h3>
+                                <h3 class="jb gi gib oi aj  bod rg text-overlay_3">
+                                    Automated <nobr>Token Delivery</nobr>
+                                </h3>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="ii qi ti gi xi ul fij">
+                                With zkSync integration, Cerebro delivers tokens
+                                to the user's wallet on the correct chain,
+                                eliminating the need for bridging. The router's
+                                fast, native-chain settlement ensures quick
+                                delivery with zero-knowledge proofs, boasting
+                                speed, privacy, and security.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="d m v ea">
+
+        </div>
+
+    </section>
+
+    <section class="th oh e">
+        <img src="src/images/Layer162.png" class="glare5">
+        <img src="src/images/Layer161.png" class="glare6">
+
+        <div class="a e">
+
+            <div class="bg-image1"></div>
+            <div class="ha qb _d ">
+                <div class="jc ng2 vn/2 yo/3">
+                    <div class="wow fadeInUp ra ke me kea fi" data-wow-delay="0s">
+                        <h3>
+                            <a href="javascript:void(0)" class="pa ob ji pi aj kk vl en sp qq2">
+                                Choose A Token
+                            </a>
+                        </h3>
+                        <video src="https://cerebro.bot/src/videos/shape-1.webm" class="jc" autoplay muted loop></video>
+                        <div class="hg hga kp kea">
+                            <p class="ii qi xi ul fi ndw">
+                                <span class="bj pi ni">Step 1:</span> Select a token on any chain,
+                                and the system will identify its native
+                                chain automatically, showing vital
+                                info and safety details.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="jc ng3 vn/2 yo/3">
+                    <div class="wow fadeInUp ra ke me kea fi" data-wow-delay="0s">
+                        <h3>
+                            <a href="javascript:void(0)" class="pa ob ji pi aj kk vl en sp qq">
+                                Routing VIA Swap
+                            </a>
+                        </h3>
+                        <video src="https://cerebro.bot/src/videos/router.webm" class="jc" autoplay muted loop></video>
+                        <div class="hg hga kp kea">
+                            <p class="ii2 qi xi ul fi ndw2">
+                                <span class="bj pi ji">Step 2:</span> Pick the currency and amount to
+                                spend, with the router optimizing the path
+                                and generating a wallet for seamless
+                                connectionless funding.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="jc ng2 vn/2 yo/3">
+                    <div class="wow fadeInUp ra ke me kea fi" data-wow-delay="0s">
+                        <h3>
+                            <a href="javascript:void(0)" class="pa ob ji pi aj kk vl en sp qq2">
+                                Recieve In Wallet
+                            </a>
+                        </h3>
+                        <video src="https://cerebro.bot/src/videos/wallet.webm" class="jc" autoplay muted loop></video>
+                        <div class="hg hga kp kea">
+                            <p class="ii qi xi ul fi ndw">
+                                <span class="bj pi ni">Step 3:</span> Specify or create a receiving
+                                wallet to get the target token sent directly,
+                                eliminating bridging or searching for the
+                                correct DEX.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class=" a e ca nf rg ml box">
+        <div class="a">
+            <div class="wow fadeInUp la fb ld fi qna" data-wow-delay="0s">
+                <span class="va gi pi bj fn cp-gothic">
+                    <img src="src/images/icons/loopiconpng18.png" class="dc">
+                    Robust, Interlinked, Conveniant
+                </span>
+                <h2 class="va li pi ui yi vl boa ri">
+                    Multi-Swap
+                </h2>
+                <p class="la ra id gi qi xi ul">
+                    The Cerebro protocol uses cross-chain communication and routing to enable
+                    smooth token swaps across multiple blockchains and DEXs. The interoperability
+                    framework automates token conversion, gas fees, and liquidity
+                    sourcing, eliminating the need for user-managed bridging.
+                    This setup ensures a unified, efficient
+                    cross-chain trading experience.
+                </p>
+                <a href="https://terminal.cerebro.bot" target="_blank"
+                    class="oe of zg wg li oi zi hk dark:hover:bg-opacity-90">
+                    DAPP
+                </a>
+            </div>
+
+
+        </div>
+        <div class="d f l ea yb jc hj">
+            <img src="src/images/Layer20.png" alt="" class="lightning" />
+            <img src="src/images/Layer23.png" alt="" class="token1" />
+            <img src="src/images/Layer28.png" alt="" class="token1a" />
+            <img src="src/images/ELLLL1.png" alt="" class="Ellipse1a" />
+            <img src="src/images/ELLLL2.png" alt="" class="Ellipse1b" />
+            <img src="src/images/Layer24.png" alt="" class="token2" />
+            <img src="src/images/Layer27.png" alt="" class="token2a" />
+            <img src="src/images/Layer22.png" alt="" class="token3" />
+            <img src="src/images/Layer25.png" alt="" class="token3a" />
+            <img src="src/images/raydium.png" alt="" class="token4" />
+            <img src="src/images/Layer26.png" alt="" class="token4a" />
+        </div>
+    </section>
+
+
+
+    <section class="e ca rg">
+        <img src="src/images/Layer19.png" class="hive4">
+        <div class="e ca">
+            <div class="a sphere">
+
+                <img src="src/images/Ellipse1.png" class="Ellipse2">
+                <img src="src/images/Ellipse1_0.png" class="Ellipse3">
+                <img src="src/images/Ellipse1_1.png" class="Ellipse4">
+                <img src="src/images/bg/Ellipse1.png" class="Ellipse2b">
+                <img src="src/images/bg/Ellipse1_0.png" class="Ellipse3b">
+                <img src="src/images/bg/Ellipse1_1.png" class="Ellipse4b">
+                <img src="src/images/czNmcy1wcml2YXRlL3Jh.png" class="bolt">
+                <img src="src/images/czNmcy1wcml2YXRlL3Jh-dark.png" class="dark-bolt">
+                <img src="src/images/avalancheavaxbadgecr.png" class="token_b1">
+                <img src="src/images/bg/avalancheavaxbadgecr.png" class="token_b1 tk-glow">
+                <img src="src/images/Layer17.png" class="token_b2">
+                <img src="src/images/bg/Layer17.png" class="token_b2 tk-glow">
+                <img src="src/images/toncoin1022925082638.png" class="token_b3">
+                <img src="src/images/bg/toncoin1022925082638.png" class="token_b3 tk-glow ext-glow">
+                <img src="src/images/OIP24.png" class="token_b4">
+                <img src="src/images/bg/OIP24.png" class="token_b4 tk-glow ext-glow">
+                <img src="src/images/bg/OIP242.png" class="token_b4 tk-noblur">
+                <img src="src/images/solanasolglasscrypto.png" class="token_b5">
+                <img src="src/images/bg/solanasolglasscrypto.png" class="token_b5 tk-glow ext-glow">
+                <img src="src/images/OIP23.png" class="token_b6">
+                <img src="src/images/bg/OIP23.png" class="token_b6 tk-glow">
+                <img src="src/images/Layer18.png" class="token_b7">
+                <img src="src/images/bg/Layer18.png" class="token_b7 tk-glow">
+                <img src="src/images/Layer161.png" class="glare3">
+            </div>
+        </div>
+    </section>
+    <section class="e ca rga">
+        <img src="src/images/Layer15.png" class="hive5">
+        <div class="a">
+            <div class="wow fadeInUp la fb ld fi qn" data-wow-delay="0s">
+                <span class="va gi pi bj fn cp-gothic ri">
+                    <img src="src/images/icons/electricity.png" class="dc">
+                    Lightnening-Fast, Instant Swaps
+                </span>
+                <p class="la id gi qi xi ul">
+                    Execute <span class="pi white">LIGHTNING-FAST</span> trades across 10 Blockchains,
+                    buy your favourite tokens & new pairs without the lengthy bridging
+                    process with transactions settled on <span class="pi white">ZKSYNC L2</span> network privatley.
+
+
+                </p>
+                <span class="va gi gic pi bj fn cp-gothic token-address" title="Copy Address">
+                    0x0000000000000000000000000000000000000000
+                </span>
+            </div>
+            <img src="src/images/Layer162.png" class="glare4">
+            <style>
+                .token-address {
+                    color: #12d3a5;
+                    z-index: 99;
+                    padding: 3px;
+                }
+
+                .token-copied {
+                    border-radius: 3px;
+                    color: rgb(0, 0, 0);
+                    background-color: #13eab5;
+                }
+
+                .icon-container {
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                    padding: 20px;
+                }
+
+                .icon {
+                    width: 150px;
+                    height: 120px;
+                    background-color: #250235;
+                    border-radius: 2.5rem;
+                    border-color: #670695;
+                    border-width: 1px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .icon img {
+                    width: 50%;
+                    height: 60%;
+                }
+
+                .icon svg {
+                    width: 50%;
+                    height: 60%;
+                }
+
+                /* Responsive adjustments */
+                @media (max-width: 1200px) {
+                    .icon-container {
+                        grid-template-columns: repeat(4, 1fr);
+                    }
+                }
+
+                @media (max-width: 992px) {
+                    .icon-container {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .icon-container {
+                        grid-template-columns: repeat(2, 1fr);
+
+                    }
+                }
+
+                @media (max-width: 576px) {
+                    .icon-container {
+                        align-items: center;
+
+                        .icon {
+                            width: 90px;
+                            height: 75px;
+                            border-radius: 1.5rem;
+                        }
+                    }
+                }
+
+                .icon:hover>svg>g {
+                    fill: #13eab5;
+                }
+
+                .icon:hover {
+                    box-shadow: 0 0 20px 5px #13eab5;
+                }
+            </style>
+
+            <div class="icon-container">
+                <a href="https://t.me/cerebroswap" target="_blank">
+                    <div class="icon">
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="190.000000pt" height="158.000000pt"
+                            viewBox="0 0 190.000000 158.000000" preserveAspectRatio="xMidYMid meet">
+                            <g transform="translate(0.000000,158.000000) scale(0.100000,-0.100000)" fill="#7b05b3"
+                                stroke="none">
+                                <path d="M1610 1516 c-249 -98 -603 -246 -1170 -491 -324 -140 -381 -168 -414
+                                -204 l-30 -31 27 -28 c30 -32 98 -56 305 -108 153 -39 183 -39 271 2 30 13
+                                118 69 195 123 282 195 313 217 450 308 135 90 168 105 181 82 18 -28 -22 -74
+                                -288 -323 -156 -146 -289 -277 -295 -291 -16 -35 -15 -62 4 -93 15 -25 542
+                                -386 622 -426 18 -10 54 -19 80 -22 104 -12 148 60 181 297 11 79 38 257 60
+                                394 22 138 51 331 65 430 14 99 30 199 36 223 5 23 10 67 10 96 0 47 -4 58
+                                -31 85 -46 47 -93 42 -259 -23z" />
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+                <a href="https://x.com/cerebroswap" target="_blank">
+                    <div class="icon"> <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="175.000000pt"
+                            height="158.000000pt" viewBox="0 0 175.000000 158.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g transform="translate(0.000000,158.000000) scale(0.100000,-0.100000)" fill="#7b05b3"
+                                stroke="none">
+                                <path d="M20 1573 c0 -5 144 -196 321 -427 176 -230 319 -424 317 -431 -2 -8
+                                -138 -168 -303 -356 -165 -188 -301 -346 -303 -351 -2 -4 54 -8 125 -8 l128 1
+                                240 274 c132 151 243 275 246 275 4 0 101 -124 215 -275 l209 -274 268 -1 268
+                                0 -59 78 c-32 42 -185 244 -340 449 -155 205 -282 377 -282 383 0 7 123 152
+                                273 324 149 171 278 319 286 329 13 16 5 17 -116 17 l-129 0 -219 -250 c-120
+                                -137 -221 -250 -225 -250 -3 0 -91 112 -196 250 l-189 250 -267 0 c-148 0
+                                -268 -3 -268 -7z m732 -504 c150 -198 364 -481 475 -627 112 -147 203 -270
+                                203 -274 0 -5 -31 -8 -68 -8 -58 0 -72 3 -89 23 -12 12 -128 162 -259 334
+                                -132 171 -339 442 -461 602 -123 159 -223 295 -223 300 0 7 29 11 75 11 l74 0
+                                273 -361z" />
+                            </g>
+                        </svg> </div>
+                </a>
+                <a href="https://medium.com" target="_blank">
+                    <div class="icon"> <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="259.000000pt"
+                            height="145.000000pt" viewBox="0 0 259.000000 145.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g transform="translate(0.000000,145.000000) scale(0.100000,-0.100000)" fill="#7b05b3"
+                                stroke="none">
+                                <path d="M655 1444 c-11 -2 -51 -11 -88 -20 -250 -57 -457 -260 -527 -518 -32
+                                -115 -26 -297 14 -411 107 -311 403 -511 726 -492 188 12 330 77 472 218 73
+                                73 93 101 131 180 63 132 80 212 75 352 -8 197 -71 340 -213 482 -90 91 -190
+                                149 -315 185 -72 20 -233 34 -275 24z" />
+                                                    <path d="M1812 1395 c-119 -52 -213 -201 -261 -416 -54 -246 -29 -514 69 -715
+                                147 -304 397 -303 545 1 69 142 88 236 89 445 1 194 -9 266 -56 397 -50 138
+                                -139 254 -224 289 -43 18 -120 17 -162 -1z" />
+                                                    <path d="M2400 1308 c-31 -52 -64 -181 -78 -308 -9 -83 -9 -464 0 -550 10
+                                -103 45 -248 70 -293 18 -32 30 -42 48 -42 76 0 129 247 130 605 0 203 -9 312
+                                -37 440 -36 167 -87 223 -133 148z" />
+                            </g>
+                        </svg> </div>
+                </a>
+            </div>
+            <div class="icon-container">
+                <a href="https://dextools.io" target="_blank">
+                    <div class="icon"> <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="177.000000pt"
+                            height="203.000000pt" viewBox="0 0 177.000000 203.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g transform="translate(0.000000,203.000000) scale(0.100000,-0.100000)" fill="#7b05b3"
+                                stroke="none">
+                                <path d="M865 2021 c-6 -5 -73 -41 -150 -82 -227 -118 -257 -135 -257 -145 -1
+                                -5 63 -41 142 -81 l143 -72 70 36 71 35 75 -37 76 -37 152 69 c84 37 151 72
+                                150 77 -3 8 -32 24 -287 158 -74 39 -139 74 -144 79 -6 5 -15 9 -21 9 -6 0
+                                -15 -4 -20 -9z" />
+                                <path d="M130 1636 l-125 -64 -3 -281 c-2 -221 0 -281 10 -281 7 0 70 25 141
+                                56 l127 56 0 149 c0 82 2 149 4 149 3 0 41 -20 202 -106 l102 -54 78 37 c44
+                                21 105 49 137 62 31 13 57 29 57 36 0 12 -82 57 -388 211 -103 52 -193 94
+                                -202 94 -8 0 -71 -29 -140 -64z" />
+                                <path d="M1373 1622 c-84 -37 -153 -70 -153 -74 0 -4 45 -32 101 -64 55 -31
+                                97 -60 92 -64 -4 -4 -174 -83 -378 -175 -203 -92 -403 -183 -443 -201 -41 -19
+                                -75 -34 -77 -34 -2 0 -38 -16 -82 -36 -131 -61 -267 -122 -360 -164 -29 -13
+                                -55 -30 -59 -39 -3 -9 -8 -86 -11 -171 l-4 -155 116 -57 116 -57 97 43 c53 23
+                                123 56 156 73 l59 30 -34 20 c-19 11 -62 36 -96 54 -35 19 -62 38 -60 42 1 5
+                                43 26 92 49 200 89 502 226 710 320 121 55 261 118 310 140 50 23 128 59 175
+                                80 47 22 95 44 108 49 22 9 22 10 20 175 l-3 166 -101 53 c-56 29 -110 56
+                                -120 59 -12 3 -78 -20 -171 -62z" />
+                                <path d="M1631 965 c-62 -29 -117 -57 -121 -62 -4 -4 -10 -70 -12 -145 -2 -75
+                                -6 -140 -10 -143 -3 -4 -73 28 -155 71 l-148 77 -79 -37 c-44 -20 -103 -47
+                                -130 -58 -28 -12 -55 -24 -59 -28 -12 -11 1 -18 416 -235 l168 -87 92 47 c51
+                                26 111 59 135 72 l42 25 0 279 c0 217 -3 279 -12 278 -7 0 -64 -25 -127 -54z" />
+                                <path d="M710 359 c-15 -9 -135 -64 -219 -101 -38 -16 -42 -21 -30 -32 8 -8
+                                100 -58 204 -111 105 -53 195 -101 202 -106 7 -7 88 28 249 107 l238 116 -134
+                                69 c-74 38 -142 69 -151 69 -8 0 -53 -16 -98 -36 l-82 -35 -75 35 c-80 39 -82
+                                39 -104 25z" />
+                            </g>
+                        </svg> </div>
+                </a>
+                <a href="https://etherscan.io" target="_blank">
+                    <div class="icon"> <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="202.000000pt"
+                            height="203.000000pt" viewBox="0 0 202.000000 203.000000"
+                            preserveAspectRatio="xMidYMid meet">
+
+                            <g transform="translate(0.000000,203.000000) scale(0.100000,-0.100000)" fill="#7b05b3"
+                                stroke="none">
+                                <path d="M875 2018 c-22 -6 -76 -19 -120 -29 -164 -39 -367 -162 -493 -301
+                                -109 -119 -196 -292 -242 -477 -29 -122 -28 -277 5 -407 42 -169 93 -284 147
+                                -329 31 -26 36 -27 116 -22 69 4 88 9 108 28 l24 22 0 286 c0 157 3 296 6 309
+                                11 38 53 52 159 52 93 0 98 -1 126 -29 l29 -29 0 -281 c0 -229 2 -281 14 -281
+                                32 0 74 23 85 46 7 17 11 136 11 379 l0 354 24 28 c23 26 30 28 116 32 57 2
+                                102 -2 121 -9 59 -25 59 -24 59 -377 0 -178 1 -323 3 -323 12 0 87 42 94 52 4
+                                7 10 197 13 421 l5 409 24 19 c20 16 40 19 131 19 l108 0 26 -31 26 -31 0
+                                -314 0 -315 46 33 c73 52 233 207 281 272 50 68 55 105 23 188 -75 194 -209
+                                358 -389 476 -107 70 -215 115 -346 145 -102 22 -280 31 -340 15z" />
+                                <path d="M1961 1000 c-231 -303 -602 -546 -1057 -693 -140 -45 -400 -107 -448
+                                -107 -39 0 -32 -12 28 -49 149 -90 360 -151 523 -151 117 0 288 36 400 83 177
+                                75 366 237 461 394 52 86 105 209 121 283 7 30 17 66 22 80 5 14 8 72 7 128
+                                l-3 102 -54 -70z" />
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="d l z ea">
+
+            </div>
+            <div class="d m _ ea">
+
+            </div>
+    </section>
+
+
+
+    <!-- ===== Footer start ===== -->
+    <footer class="e ca th">
+        <div class="a">
+            <div class="ha qb qbb _d">
+                <div class="ng ">
+                    <div class="wow fadeInUp dd" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s;">
+                        <a href="index.html" class="ta pb">
+                            <img src="src/images/logo-2.png" alt="logo" class="sb wk hd">
+                            <img src="src/images/logo-2.png" alt="logo" class="xk ">
+                        </a>
+
+
+                    </div>
+                </div>
+
+                <div class="qb qba be ">
+                    <a href="javascript:void(0)" class="qb ac pc be de oe nf xi fk lk gl vl /*bm*/" name="social-link"
+                        aria-label="social-link">
+                        <img src="src/images/icons/footer-icon-1.png" class="footer-icon">
+                    </a>
+                    <a href="javascript:void(0)" class="qb ac pc be de oe nf xi fk lk gl vl " name="social-link"
+                        aria-label="social-link">
+                        <img src="src/images/icons/footer-icon-2.png" class="footer-icon">
+                    </a>
+                    <a href="javascript:void(0)" class="qb ac pc be de oe nf xi fk lk gl vl " name="social-link"
+                        aria-label="social-link">
+                        <img src="src/images/icons/footer-icon-3.png" class="footer-icon">
+                    </a>
+                    <a href="javascript:void(0)" class="qb ac pc be de oe nf xi fk lk gl vl " name="social-link"
+                        aria-label="social-link">
+                        <img src="src/images/icons/footer-icon-4.png" class="footer-icon">
+                    </a>
+                    <a href="javascript:void(0)" class="qb ac pc be de oe nf xi fk lk gl vl " name="social-link"
+                        aria-label="social-link">
+                        <img src="src/images/icons/footer-icon-5.png" class="footer-icon">
+                    </a>
+                    <a href="javascript:void(0)" class="qb ac pc be de oe nf xi fk lk gl vl " name="social-link"
+                        aria-label="social-link">
+                        <img src="src/images/icons/footer-icon-6.png" class="footer-icon">
+                    </a>
+                    <a href="javascript:void(0)" class="qb ac pc be de oe nf xi fk lk gl vl " name="social-link"
+                        aria-label="social-link">
+                        <img src="src/images/icons/footer-icon-7.png" class="footer-icon">
+                    </a>
+                    <a href="javascript:void(0)" class="qb ac pc be de oe nf xi fk lk gl vl " name="social-link"
+                        aria-label="social-link">
+                        <img src="src/images/icons/footer-icon-8.png" class="footer-icon">
+                    </a>
+                    <a href="javascript:void(0)" class="qb ac pc be de oe nf xi fk lk gl vl " name="social-link"
+                        aria-label="social-link">
+                        <img src="src/images/icons/footer-icon-9.png" class="footer-icon">
+                    </a>
+                    <a href="javascript:void(0)" class="qb ac pc be de oe nf xi fk lk gl vl " name="social-link"
+                        aria-label="social-link">
+                        <img src="src/images/icons/footer-icon-10.png" class="footer-icon">
+                    </a>
+                </div>
+            </div>
+            <div class="qb be ge fir">
+
+                <div class="">
+                    <div class="wow fadeInUp " data-wow-delay="0s" style="visibility: visible; animation-delay: 0s;">
+                        <a href="/" class="qb ac be de xi lk vl em">
+                            Home
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="">
+                    <div class="wow fadeInUp" data-wow-delay="0s" style="visibility: visible; animation-delay: 0s;">
+                        <a href="https://docs.cerebro.bot" target="_blank" class="qb ac be de xi lk vl em">
+                            Docs
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="">
+                    <div class="wow fadeInUp " data-wow-delay="0s" style="visibility: visible; animation-delay: 0s;">
+                        <a href="https://t.me/cerebroswap" target="_blank" class="qb ac be de xi lk vl em">
+                            Community
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="wow fadeInUp we bf dh zk qb qba fib" data-wow-delay="0s"
+                style="visibility: visible; animation-delay: 0s;">
+                <p class="ii qi wi xi ul xo/12">
+                    © 2024 CEREBRO TECHNOLOGIES <nobr>All Rights Reserved</nobr>
+                </p>
+                <div class="xc bn"> <a href="mailto:contact@cerebro.bot" class="ii qi wi xi ul bn ria">
+                        contact@cerebro.bot
+                    </a> </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- ===== Footer end ===== -->
+
+    <!-- ====== Back To Top Start -->
+    <!--a x-show="scrolledFromTop" href="javascript:void(0)" name="scrollToTop" aria-label="scrollToTop"
+    class="zq back-to-top c p q r fa qb ac pc be de me of zi kj rj">
+    <span class="cb bc qc sd we xe cf"></span>
+  </a-->
+    <!-- ====== Back To Top End -->
+
+    <!-- ===== JS Files ====== -->
+    <script defer src="bundle.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
